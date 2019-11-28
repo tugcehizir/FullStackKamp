@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Liste</title>
+  <script>
+    var bilgiler=[]; //dizi
+    function $(id){ //id verilerek eleman yakalanır.JQuery'nin işlevi!
+      return document.getElementById(id);
+    }
+    function Ekle(){
+      var id=$("txtId").value;
+      var ad=$("txtAd").value;
+
+      var bilgi={}; //nesne
+
+      bilgi.Id=id;
+      bilgi.Ad=ad;
+      bilgiler.push(bilgi); //push ile diziye eleman eklendi.
+    };
+    function Listele(){
+      var p = $("para");
+      for(i=0; i<bilgiler.length; i++){
+        p.innerHTML += bilgiler[i].Ad + "<br>";
+      }
+    };
+  </script>
+</head>
+<body>
+  <h2>JavaScript ile yapabileceklerimiz!</h2>
+Id: <input type="text" id="txtId">
+<br>
+Ad: <input type="text" id="txtAd">
+<br>
+<input type="button" id="btnEkle" value="Ekle" onclick="Ekle();">
+<br>
+<input type="button" id="btnListele" value="Listele" onclick="Listele();">
+
+<p id="para"></p>
+</body>
+</html>
