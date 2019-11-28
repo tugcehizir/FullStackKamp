@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SIGN IN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="genel">
+    <div class="logo">  <img src="./profil.jpg" alt="avatar" title="avatar"> </div>
+    <div class="icerik">
+      <form name="giris" action="https://www.w3schools.com/action_page.php" method="post">
+        <label class="label" for="user"> Kullanıcı Adı </label>
+        <br/>
+        <input id="user" class="input" name="user" type="text" placeholder="Kullanıcı Adı Giriniz..." required/>
+        <br/>
+        <label class="label" for="password"> Parola </label>
+        <br/>
+        <input id="password" class="input" name="password" type="password" placeholder="Parola Giriniz..." required/>
+        <br/>
+         <label class="label" for="passwordrp"> Parola Tekrar </label>
+          <br/>
+          <input id="passwordrp" class="input" name="passwordrp" type="password" placeholder="Parolayı Tekrar Giriniz..." required/>
+          <br/>
+        <button class="login" type="submit" onclick="Kontrol()">KAYIT OL</button>
+        <br/>
+      </form>
+    </div>
+    <div class="footer">
+      <a href="index.html"><p>Kullanıcı Girişi!</p></a>
+    </div>
+  </div>
+  <script>
+      function Kontrol(){
+      var isim = document.getElementById('user').value;
+      window.alert(isim);
+
+      }
+  </script>
+</body>
+
+</html>
