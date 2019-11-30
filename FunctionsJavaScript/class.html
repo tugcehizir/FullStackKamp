@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Class</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h3>Bu sayfada Class Örneği yapılmaktadır.</h3>
+<p id="yazi"></p>
+<p id="kitapyazi"></p>
+<p id="filmyazi"></p>
+<script>
+
+  class Kisi {
+    constructor(id,ad,soyad)
+    {
+      this.id = id;
+      this.ad = ad;
+      this.soyad = soyad;
+    }
+
+    bilgiVer(){ //Ad-Soyad için kullanılan metod.
+      return this.ad + " " + this.soyad;
+
+    }
+    static tipBildir(){
+      return "Kişi tipinden bir nesneyim!";
+    }
+  }
+
+k1 = new Kisi(1,"Tuğçe","Hızır");
+k2 = new Kisi(2,"Tuanna","Hızır"); //Kişiler
+
+let kisiler = [k1,k2];
+let bilgi= "";
+for(let i=0; i<kisiler.length; i++ )
+{
+bilgi += kisiler[i].bilgiVer() + "<br>";
+}
+
+document.getElementById("yazi").innerHTML = bilgi + Kisi.tipBildir();
+
+</script>
+</body>
+</html>

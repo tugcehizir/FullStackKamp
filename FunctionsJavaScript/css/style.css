@@ -1,0 +1,23 @@
+body{
+  width: 980px;
+  margin-left: 25px;
+}
+h2{
+  color:Gray;
+  font-style: oblique;
+  font-family: cursive;
+}
+
+button{
+  color: white;
+  background-color: Gray;
+  width: 65px;
+  height: 35px;
+}
+
+input{
+  text-align: center;
+  width: 130px;
+  height: 35px;
+  margin: 15px 0;
+}
