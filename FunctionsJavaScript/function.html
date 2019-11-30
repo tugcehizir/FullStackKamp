@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fonksiyon Çağrım Örnekleri</title>
+</head>
+</<body>
+<h3>Fonksiyon Çağrım Örnekleri</h3>
+<p>Lütfen developer tools'u <sub>f12'ye basabilirsiniz</sub> kullanarak console sekmesini takip edin!</p>
+  <script>
+  f4=function(name, surname)
+  {return "Hello " + name + " " +surname;
+  };
+  console.log(f4()); //Sonuç: Hello undefined undefined
+  console.log(f4("tuc"));//2 parametreli fonksiyona tek parametreli çağrım.
+  console.log(f4(surname="Hızır"));//İlk parametre adına çağrımı kabul etti.
+  f = function() {console.log( "Hello World!")}; //Görünmeyen bir return'e sahip!
+  f();
+
+  f2=function()
+  {return "Hello f2";
+};
+console.log(f()); //undefined gelme sebebi: Return parametre almadı!
+
+f3=function(name)
+{return "Hello" + name;
+};
+console.log(f3()); //Parametre bekleyen yere parametre gelmese dahi,
+// undefined alarak parametresiz çağrı sebebi ile error vermez!
+//undefined üzerinde yapılmaya çalışılan işlem error veriyor olabilir!
+console.log(f3("tuc","enetto")); //Parametreli çağrım. Fonksiyon tek parametre gibi davranır, ilk elemanı kullanır!
+</script>
+</body>
+</html>

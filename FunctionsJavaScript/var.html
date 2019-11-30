@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Var</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+</<body>
+  <p>Değişken Davranışları</p>
+    <script>
+      //var x=5;
+      //var y=6;
+      x=5;
+      function f1(){
+        var z=20; //local, var olmadan tanımlama yapılırsa global
+        var x;
+        alert(x);
+        var x=10;
+      }
+      function f2(){
+        var y=12;
+        alert(y);
+        alert(x);
+        alert(z);
+      }
+      alert(x);
+      //var x=7;
+      f1();
+      var x;
+      f2();
+    </script>
+</body>
+</html>
