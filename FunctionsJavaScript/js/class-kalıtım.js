@@ -1,5 +1,5 @@
 
-class Urun{ //Genel Tanım - Kalıtım yapılan Kaynak
+class Urun{ // Kalıtım yapılan Kaynak
   constructor(ad,fiyat)
   {
     this._ad = ad;

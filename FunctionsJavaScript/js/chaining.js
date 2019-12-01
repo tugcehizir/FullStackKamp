@@ -20,4 +20,4 @@ class Kisi
 }
 
 let k = new Kisi("Tuğçe","Hızır");
-k.adDegistir("Ayşe").soyadDegistir("Yılmaz");
+k.adDegistir("Hakan").soyadDegistir("Hızır");
