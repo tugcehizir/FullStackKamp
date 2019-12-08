@@ -17,10 +17,16 @@ class App extends React.Component {
   }
   componentDidMount() {
     console.log('Burada yapılan işlem: component Did Mount!');
+    const { currentValue } = this.state;
+    if(currentValue === ""){
+
+    }
   }
   componentDidUpdate(prevProps, prevState, snapshot) { //değişkenler kişisel tercih
-
-    //Burada setState yapılamaz!
+    // const { currentValue } = this.state;
+    // if(prevState.currentValue !== currentValue && currentValue === ""){
+    //   this.setState({ isRunOnClick: false });
+    // }
     console.log('prevProps', prevProps); //Önceki Props
     console.log('prevState', prevState); //Önceki State
     console.log('snapshot', snapshot); //Snapshot
@@ -52,6 +58,7 @@ class App extends React.Component {
   };
   render() {
     console.log('render!');
+    const { currentValue } = this.state;
 
     const css = {
       backgroundColor: 'black',
@@ -62,7 +69,11 @@ class App extends React.Component {
         <div> <h4>Liste İşlemleri</h4> </div>
         <div>
           <Input handleOnChange={this._handleOnChange}></Input>
-          <Button title="test" handleOnClick={this._handleOnClick}>test</Button>
+          { 
+          currentValue && (
+            <Button isDisable={currentValue === ''} title="Ekle" handleOnClick={this._handleOnClick}>Ekle!</Button>
+          )  
+          }
         </div>
         <div style={css}> {/* css tanımı kullanım. amacı: hata verebilen css yazımı */}
           <ul>
